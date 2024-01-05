@@ -1,0 +1,78 @@
+Syscall	Count	Args
+dup	1042185	unsigned int fildes
+write	61294	unsigned int fd const char *buf size_t count
+select	38027	int n fd_set *inp fd_set *outp fd_set*exp struct timeval *tvp
+read	36938	unsigned int fd char *buf size_t count
+writev	10479	unsigned long fd const struct iovec *vec unsigned long vlen
+munmap	8506	unsigned long addr size_t len
+mmap	6989	unsigned long addr unsigned long len unsigned long prot unsigned long flags unsigned long fd unsigned long off
+rt_sigprocmask	4180	int how sigset_t *nset sigset_t *oset size_t sigsetsize
+setsockopt	2856	int fd int level int optname char *optval int optlen
+mprotect	2728	unsigned long start size_t len unsigned long prot
+madvise	2633	unsigned long start size_t len_in int behavior
+exit	2528	int error_code
+getsockopt	1949	int fd int level int optname char *optval int *optlen
+close	1726	unsigned int fd
+socket	1008	int family int type int protocol
+bind	951	int fd struct sokaddr *umyaddr int addrlen
+rt_sigaction	919	int sig const struct sigaction *act struct sigaction *oact size_t sigsetsize
+futex	500	u32 *uaddr int op u32 val struct timespec *utime u32 *uaddr2 u32 val3
+sendto	450	int fd void *buff size_t len unsigned flags struct sockaddr *addr int addr_len
+ioctl	384	unsigned int fd unsigned int cmd unsigned long arg
+openat	330	int dfd const char *filename int flags int mode
+brk	287	unsigned long brk
+exit_group	287	int error_code
+recvfrom	281	int fd void *ubuf size_t size unsigned flags struct sockaddr *addr int *addr_len
+lseek	222	unsigned int fd off_t offset unsigned int origin
+getuid	220	
+execve	212	const char *filename const char *const argv[] const char *const envp[]
+arch_prctl	207	struct task_struct *task int code unsigned long *addr
+set_tid_address	182	int *tidptr
+open	178	const char *filename int flags int mode
+rt_sigreturn	177	unsigned long __unused
+wait4	173	pid_t upid int *stat_addr int options struct rusage *ru
+access	159	const char *filename int mode
+geteuid	156	
+getegid	155	
+getgid	153	
+stat	97	const char *filename struct stat *statbuf
+pread64	79	unsigned long fd char *buf size_t count loff_t pos
+connect	77	int fd struct sockaddr *uservaddr int addrlen
+fcntl	61	unsigned int fd unsigned int cmd unsigned long arg
+getpid	48	
+getsockname	46	int fd struct sockaddr *usockaddr int *usockaddr_len
+clone	40	unsigned long clone_flags unsigned long newsp void *parent_tid void *child_tid unsigned int tid
+statfs	34	const char *pathname struct statfs *buf
+unlink	33	const char *pathname
+pipe	31	int *filedes
+readv	26	unsigned long fd const struct iovec *vec unsigned long vlen
+getpeername	25	int fd struct sockaddr *usockaddr int *usockaddr_len
+dup2	23	unsigned int oldfd unsigned int newfd
+getppid	21	
+kill	20	pid_t pid int sig
+getdents64	20	unsigned int fd struct linux_dirent64 *dirent unsigned int count
+getpgrp	18	
+sysinfo	16	struct sysinfo *info
+ftruncate	14	unsigned int fd unsigned long length
+prlimit64	13	pid_t pid unsigned int resource const struct rlimit64 *new_rlim struct rlimit64 *old_rlim
+clock_gettime	12	const clockid_t which_clock struct timespec *tp
+readlink	11	const char *path char *buf int bufsiz
+prctl	11	int option unsigned long arg2 unsigned long arg3 unsigned long arg4 unsigned long arg5
+socketpair	11	int family int type int protocol int *usockvec
+fork	11	
+setitimer	10	int which struct itimerval *value struct itimerval *ovalue
+utimensat	9	int dfd const char *filename struct timespec *utimes int flags
+listen	4	int fd int backlog
+sendfile	3	int out_fd int in_fd off_t *offset size_t count
+sched_getaffinity	2	pid_t pid unsigned int len unsigned long *user_mask_ptr
+chdir	2	const char *filename
+gettid	2	
+chmod	2	const char *filename mode_t mode
+getcwd	1	char *buf unsigned long size
+nanosleep	1	struct timespec *rqtp struct timespec *rmtp
+mkdir	1	const char *pathname int mode
+rename	1	const char *oldname const char *newname
+rmdir	1	const char *pathname
+lstat	1	fconst char *filename struct stat *statbuf
+accept	1	int fd struct sockaddr *upeer_sockaddr int *upeer_addrlen
+shutdown	1	int fd int how

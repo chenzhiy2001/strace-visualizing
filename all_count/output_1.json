@@ -1,0 +1,387 @@
+[
+  {
+    "syscall": "dup",
+    "count": 1042185,
+    "args": "unsigned int fildes"
+  },
+  {
+    "syscall": "write",
+    "count": 61294,
+    "args": "unsigned int fd const char *buf size_t count"
+  },
+  {
+    "syscall": "select",
+    "count": 38027,
+    "args": "int n fd_set *inp fd_set *outp fd_set*exp struct timeval *tvp"
+  },
+  {
+    "syscall": "read",
+    "count": 36938,
+    "args": "unsigned int fd char *buf size_t count"
+  },
+  {
+    "syscall": "writev",
+    "count": 10479,
+    "args": "unsigned long fd const struct iovec *vec unsigned long vlen"
+  },
+  {
+    "syscall": "munmap",
+    "count": 8506,
+    "args": "unsigned long addr size_t len"
+  },
+  {
+    "syscall": "mmap",
+    "count": 6989,
+    "args": "unsigned long addr unsigned long len unsigned long prot unsigned long flags unsigned long fd unsigned long off"
+  },
+  {
+    "syscall": "rt_sigprocmask",
+    "count": 4180,
+    "args": "int how sigset_t *nset sigset_t *oset size_t sigsetsize"
+  },
+  {
+    "syscall": "setsockopt",
+    "count": 2856,
+    "args": "int fd int level int optname char *optval int optlen"
+  },
+  {
+    "syscall": "mprotect",
+    "count": 2728,
+    "args": "unsigned long start size_t len unsigned long prot"
+  },
+  {
+    "syscall": "madvise",
+    "count": 2633,
+    "args": "unsigned long start size_t len_in int behavior"
+  },
+  {
+    "syscall": "exit",
+    "count": 2528,
+    "args": "int error_code"
+  },
+  {
+    "syscall": "getsockopt",
+    "count": 1949,
+    "args": "int fd int level int optname char *optval int *optlen"
+  },
+  {
+    "syscall": "close",
+    "count": 1726,
+    "args": "unsigned int fd"
+  },
+  {
+    "syscall": "socket",
+    "count": 1008,
+    "args": "int family int type int protocol"
+  },
+  {
+    "syscall": "bind",
+    "count": 951,
+    "args": "int fd struct sokaddr *umyaddr int addrlen"
+  },
+  {
+    "syscall": "rt_sigaction",
+    "count": 919,
+    "args": "int sig const struct sigaction *act struct sigaction *oact size_t sigsetsize"
+  },
+  {
+    "syscall": "futex",
+    "count": 500,
+    "args": "u32 *uaddr int op u32 val struct timespec *utime u32 *uaddr2 u32 val3"
+  },
+  {
+    "syscall": "sendto",
+    "count": 450,
+    "args": "int fd void *buff size_t len unsigned flags struct sockaddr *addr int addr_len"
+  },
+  {
+    "syscall": "ioctl",
+    "count": 384,
+    "args": "unsigned int fd unsigned int cmd unsigned long arg"
+  },
+  {
+    "syscall": "openat",
+    "count": 330,
+    "args": "int dfd const char *filename int flags int mode"
+  },
+  {
+    "syscall": "brk",
+    "count": 287,
+    "args": "unsigned long brk"
+  },
+  {
+    "syscall": "exit_group",
+    "count": 287,
+    "args": "int error_code"
+  },
+  {
+    "syscall": "recvfrom",
+    "count": 281,
+    "args": "int fd void *ubuf size_t size unsigned flags struct sockaddr *addr int *addr_len"
+  },
+  {
+    "syscall": "lseek",
+    "count": 222,
+    "args": "unsigned int fd off_t offset unsigned int origin"
+  },
+  {
+    "syscall": "getuid",
+    "count": 220,
+    "args": ""
+  },
+  {
+    "syscall": "execve",
+    "count": 212,
+    "args": "const char *filename const char *const argv[] const char *const envp[]"
+  },
+  {
+    "syscall": "arch_prctl",
+    "count": 207,
+    "args": "struct task_struct *task int code unsigned long *addr"
+  },
+  {
+    "syscall": "set_tid_address",
+    "count": 182,
+    "args": "int *tidptr"
+  },
+  {
+    "syscall": "open",
+    "count": 178,
+    "args": "const char *filename int flags int mode"
+  },
+  {
+    "syscall": "rt_sigreturn",
+    "count": 177,
+    "args": "unsigned long __unused"
+  },
+  {
+    "syscall": "wait4",
+    "count": 173,
+    "args": "pid_t upid int *stat_addr int options struct rusage *ru"
+  },
+  {
+    "syscall": "access",
+    "count": 159,
+    "args": "const char *filename int mode"
+  },
+  {
+    "syscall": "geteuid",
+    "count": 156,
+    "args": ""
+  },
+  {
+    "syscall": "getegid",
+    "count": 155,
+    "args": ""
+  },
+  {
+    "syscall": "getgid",
+    "count": 153,
+    "args": ""
+  },
+  {
+    "syscall": "stat",
+    "count": 97,
+    "args": "const char *filename struct stat *statbuf"
+  },
+  {
+    "syscall": "pread64",
+    "count": 79,
+    "args": "unsigned long fd char *buf size_t count loff_t pos"
+  },
+  {
+    "syscall": "connect",
+    "count": 77,
+    "args": "int fd struct sockaddr *uservaddr int addrlen"
+  },
+  {
+    "syscall": "fcntl",
+    "count": 61,
+    "args": "unsigned int fd unsigned int cmd unsigned long arg"
+  },
+  {
+    "syscall": "getpid",
+    "count": 48,
+    "args": ""
+  },
+  {
+    "syscall": "getsockname",
+    "count": 46,
+    "args": "int fd struct sockaddr *usockaddr int *usockaddr_len"
+  },
+  {
+    "syscall": "clone",
+    "count": 40,
+    "args": "unsigned long clone_flags unsigned long newsp void *parent_tid void *child_tid unsigned int tid"
+  },
+  {
+    "syscall": "statfs",
+    "count": 34,
+    "args": "const char *pathname struct statfs *buf"
+  },
+  {
+    "syscall": "unlink",
+    "count": 33,
+    "args": "const char *pathname"
+  },
+  {
+    "syscall": "pipe",
+    "count": 31,
+    "args": "int *filedes"
+  },
+  {
+    "syscall": "readv",
+    "count": 26,
+    "args": "unsigned long fd const struct iovec *vec unsigned long vlen"
+  },
+  {
+    "syscall": "getpeername",
+    "count": 25,
+    "args": "int fd struct sockaddr *usockaddr int *usockaddr_len"
+  },
+  {
+    "syscall": "dup2",
+    "count": 23,
+    "args": "unsigned int oldfd unsigned int newfd"
+  },
+  {
+    "syscall": "getppid",
+    "count": 21,
+    "args": ""
+  },
+  {
+    "syscall": "kill",
+    "count": 20,
+    "args": "pid_t pid int sig"
+  },
+  {
+    "syscall": "getdents64",
+    "count": 20,
+    "args": "unsigned int fd struct linux_dirent64 *dirent unsigned int count"
+  },
+  {
+    "syscall": "getpgrp",
+    "count": 18,
+    "args": ""
+  },
+  {
+    "syscall": "sysinfo",
+    "count": 16,
+    "args": "struct sysinfo *info"
+  },
+  {
+    "syscall": "ftruncate",
+    "count": 14,
+    "args": "unsigned int fd unsigned long length"
+  },
+  {
+    "syscall": "prlimit64",
+    "count": 13,
+    "args": "pid_t pid unsigned int resource const struct rlimit64 *new_rlim struct rlimit64 *old_rlim"
+  },
+  {
+    "syscall": "clock_gettime",
+    "count": 12,
+    "args": "const clockid_t which_clock struct timespec *tp"
+  },
+  {
+    "syscall": "readlink",
+    "count": 11,
+    "args": "const char *path char *buf int bufsiz"
+  },
+  {
+    "syscall": "prctl",
+    "count": 11,
+    "args": "int option unsigned long arg2 unsigned long arg3 unsigned long arg4 unsigned long arg5"
+  },
+  {
+    "syscall": "socketpair",
+    "count": 11,
+    "args": "int family int type int protocol int *usockvec"
+  },
+  {
+    "syscall": "fork",
+    "count": 11,
+    "args": ""
+  },
+  {
+    "syscall": "setitimer",
+    "count": 10,
+    "args": "int which struct itimerval *value struct itimerval *ovalue"
+  },
+  {
+    "syscall": "utimensat",
+    "count": 9,
+    "args": "int dfd const char *filename struct timespec *utimes int flags"
+  },
+  {
+    "syscall": "listen",
+    "count": 4,
+    "args": "int fd int backlog"
+  },
+  {
+    "syscall": "sendfile",
+    "count": 3,
+    "args": "int out_fd int in_fd off_t *offset size_t count"
+  },
+  {
+    "syscall": "sched_getaffinity",
+    "count": 2,
+    "args": "pid_t pid unsigned int len unsigned long *user_mask_ptr"
+  },
+  {
+    "syscall": "chdir",
+    "count": 2,
+    "args": "const char *filename"
+  },
+  {
+    "syscall": "gettid",
+    "count": 2,
+    "args": ""
+  },
+  {
+    "syscall": "chmod",
+    "count": 2,
+    "args": "const char *filename mode_t mode"
+  },
+  {
+    "syscall": "getcwd",
+    "count": 1,
+    "args": "char *buf unsigned long size"
+  },
+  {
+    "syscall": "nanosleep",
+    "count": 1,
+    "args": "struct timespec *rqtp struct timespec *rmtp"
+  },
+  {
+    "syscall": "mkdir",
+    "count": 1,
+    "args": "const char *pathname int mode"
+  },
+  {
+    "syscall": "rename",
+    "count": 1,
+    "args": "const char *oldname const char *newname"
+  },
+  {
+    "syscall": "rmdir",
+    "count": 1,
+    "args": "const char *pathname"
+  },
+  {
+    "syscall": "lstat",
+    "count": 1,
+    "args": "fconst char *filename struct stat *statbuf"
+  },
+  {
+    "syscall": "accept",
+    "count": 1,
+    "args": "int fd struct sockaddr *upeer_sockaddr int *upeer_addrlen"
+  },
+  {
+    "syscall": "shutdown",
+    "count": 1,
+    "args": "int fd int how"
+  }
+]
