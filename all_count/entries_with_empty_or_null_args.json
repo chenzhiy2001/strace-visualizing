@@ -1,0 +1,12 @@
+[{"syscall": "mmap", "args": [null, 50070, ["PROT_READ"], ["MAP_PRIVATE"], 3, 0], "result": 139981825216512, "timing": null, "pid": 28352, "type": "SYSCALL"},
+{"syscall": "read", "args": [3, "", 4096], "result": 0, "timing": null, "pid": 28352, "type": "SYSCALL"},
+{"syscall": "rt_sigprocmask", "args": [["SIG_BLOCK"], null, [], 8], "result": 0, "timing": null, "pid": 28352, "type": "SYSCALL"},
+{"syscall": "prlimit64", "args": [0, ["RLIMIT_NPROC"], null, {"rlim_cur": 31298, "rlim_max": 31298}], "result": 0, "timing": null, "pid": 28352, "type": "SYSCALL"},
+{"syscall": "wait4", "args": [-1, 140734711195024, ["WNOHANG"], null], "result": "-1 ECHILD (No child processes)", "timing": null, "pid": 28352, "type": "SYSCALL"},
+{"syscall": "select", "args": [5, [4], [], null, null], "result": "1 (in [4])", "timing": null, "pid": 28677, "type": "SYSCALL"},
+{"syscall": "recvfrom", "args": [5, "6789", 4, 0, null, null], "result": 4, "timing": null, "pid": 28677, "type": "SYSCALL"},
+{"syscall": "rt_sigaction", "args": [["SIGCHLD"], {"sa_handler": 140137839283389, "sa_mask": {"operator": "~", "elements": ["RTMIN", "RT_1", "RT_2"]}, "sa_flags": ["SA_RESTORER"], "sa_restorer": 140137839770171}, null, 8], "result": 0, "timing": null, "pid": 19613, "type": "SYSCALL"},
+{"syscall": "utimensat", "args": [["AT_FDCWD"], "test.txt", null, 0], "result": "-1 ENOENT (No such file or directory)", "timing": null, "pid": 19654, "type": "SYSCALL"},
+{"syscall": "sendfile", "args": [1, 3, null, 16777216], "result": "-1 EINVAL (Invalid argument)", "timing": null, "pid": 19656, "type": "SYSCALL"},
+{"syscall": "futex", "args": [139665087272608, ["FUTEX_WAIT_PRIVATE"], 2147483650, null], "result": "-1 EAGAIN (Resource temporarily unavailable)", "timing": null, "pid": 20661, "type": "SYSCALL"},
+{"syscall": "sendto", "args": [4, "\\0\\0\\0b\\0\\0\\0\\0\\0\\0}\\0\\0\\0\\3\\350\\0\\0\\0!\\0\\0}\\0\\377\\377\\377\\377\\0\\0\\0!", 656, 0, null, 0], "result": 656, "timing": null, "pid": 28510, "type": "SYSCALL"}]
