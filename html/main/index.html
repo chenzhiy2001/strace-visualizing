@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Syscalls</title>
+  </head>
+  <body style="padding: 1rem">
+    <table>
+      <tr>
+        <th>Syscall</th>
+        <th>Count</th>
+        <th>Args</th>
+      </tr>
+      <tr>
+        <td><a href="./syscall.html" target="_blank">syscall</a></td>
+        <td>count</td>
+        <td>args</td>
+      </tr>
+      <tr>
+        <td><a href="./dup.html" target="_blank">dup</a></td>
+        <td>1042185</td>
+        <td>unsigned int fildes</td>
+      </tr>
+      <tr>
+        <td><a href="./write.html" target="_blank">write</a></td>
+        <td>61294</td>
+        <td>unsigned int fd const char *buf size_t count</td>
+      </tr>
+      <tr>
+        <td><a href="./select.html" target="_blank">select</a></td>
+        <td>38027</td>
+        <td>int n fd_set *inp fd_set *outp fd_set*exp struct timeval *tvp</td>
+      </tr>
+      <tr>
+        <td><a href="./read.html" target="_blank">read</a></td>
+        <td>36938</td>
+        <td>unsigned int fd char *buf size_t count</td>
+      </tr>
+      <tr>
+        <td><a href="./writev.html" target="_blank">writev</a></td>
+        <td>10479</td>
+        <td>unsigned long fd const struct iovec *vec unsigned long vlen</td>
+      </tr>
+      <tr>
+        <td><a href="./munmap.html" target="_blank">munmap</a></td>
+        <td>8506</td>
+        <td>unsigned long addr size_t len</td>
+      </tr>
+      <tr>
+        <td><a href="./mmap.html" target="_blank">mmap</a></td>
+        <td>6989</td>
+        <td>
+          unsigned long addr unsigned long len unsigned long prot unsigned long
+          flags unsigned long fd unsigned long off
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="./rt_sigprocmask.html" target="_blank">rt_sigprocmask</a>
+        </td>
+        <td>4180</td>
+        <td>int how sigset_t *nset sigset_t *oset size_t sigsetsize</td>
+      </tr>
+      <tr>
+        <td><a href="./setsockopt.html" target="_blank">setsockopt</a></td>
+        <td>2856</td>
+        <td>int fd int level int optname char *optval int optlen</td>
+      </tr>
+      <tr>
+        <td><a href="./mprotect.html" target="_blank">mprotect</a></td>
+        <td>2728</td>
+        <td>unsigned long start size_t len unsigned long prot</td>
+      </tr>
+      <tr>
+        <td><a href="./madvise.html" target="_blank">madvise</a></td>
+        <td>2633</td>
+        <td>unsigned long start size_t len_in int behavior</td>
+      </tr>
+      <tr>
+        <td><a href="./exit.html" target="_blank">exit</a></td>
+        <td>2528</td>
+        <td>int error_code</td>
+      </tr>
+      <tr>
+        <td><a href="./getsockopt.html" target="_blank">getsockopt</a></td>
+        <td>1949</td>
+        <td>int fd int level int optname char *optval int *optlen</td>
+      </tr>
+      <tr>
+        <td><a href="./close.html" target="_blank">close</a></td>
+        <td>1726</td>
+        <td>unsigned int fd</td>
+      </tr>
+      <tr>
+        <td><a href="./socket.html" target="_blank">socket</a></td>
+        <td>1008</td>
+        <td>int family int type int protocol</td>
+      </tr>
+      <tr>
+        <td><a href="./bind.html" target="_blank">bind</a></td>
+        <td>951</td>
+        <td>int fd struct sokaddr *umyaddr int addrlen</td>
+      </tr>
+      <tr>
+        <td><a href="./rt_sigaction.html" target="_blank">rt_sigaction</a></td>
+        <td>919</td>
+        <td>
+          int sig const struct sigaction *act struct sigaction *oact size_t
+          sigsetsize
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./futex.html" target="_blank">futex</a></td>
+        <td>500</td>
+        <td>
+          u32 *uaddr int op u32 val struct timespec *utime u32 *uaddr2 u32 val3
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./sendto.html" target="_blank">sendto</a></td>
+        <td>450</td>
+        <td>
+          int fd void *buff size_t len unsigned flags struct sockaddr *addr int
+          addr_len
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./ioctl.html" target="_blank">ioctl</a></td>
+        <td>384</td>
+        <td>unsigned int fd unsigned int cmd unsigned long arg</td>
+      </tr>
+      <tr>
+        <td><a href="./openat.html" target="_blank">openat</a></td>
+        <td>330</td>
+        <td>int dfd const char *filename int flags int mode</td>
+      </tr>
+      <tr>
+        <td><a href="./brk.html" target="_blank">brk</a></td>
+        <td>287</td>
+        <td>unsigned long brk</td>
+      </tr>
+      <tr>
+        <td><a href="./exit_group.html" target="_blank">exit_group</a></td>
+        <td>287</td>
+        <td>int error_code</td>
+      </tr>
+      <tr>
+        <td><a href="./recvfrom.html" target="_blank">recvfrom</a></td>
+        <td>281</td>
+        <td>
+          int fd void *ubuf size_t size unsigned flags struct sockaddr *addr int
+          *addr_len
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./lseek.html" target="_blank">lseek</a></td>
+        <td>222</td>
+        <td>unsigned int fd off_t offset unsigned int origin</td>
+      </tr>
+      <tr>
+        <td><a href="./getuid.html" target="_blank">getuid</a></td>
+        <td>220</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./execve.html" target="_blank">execve</a></td>
+        <td>212</td>
+        <td>
+          const char *filename const char *const argv[] const char *const envp[]
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./arch_prctl.html" target="_blank">arch_prctl</a></td>
+        <td>207</td>
+        <td>struct task_struct *task int code unsigned long *addr</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="./set_tid_address.html" target="_blank">set_tid_address</a>
+        </td>
+        <td>182</td>
+        <td>int *tidptr</td>
+      </tr>
+      <tr>
+        <td><a href="./open.html" target="_blank">open</a></td>
+        <td>178</td>
+        <td>const char *filename int flags int mode</td>
+      </tr>
+      <tr>
+        <td><a href="./rt_sigreturn.html" target="_blank">rt_sigreturn</a></td>
+        <td>177</td>
+        <td>unsigned long __unused</td>
+      </tr>
+      <tr>
+        <td><a href="./wait4.html" target="_blank">wait4</a></td>
+        <td>173</td>
+        <td>pid_t upid int *stat_addr int options struct rusage *ru</td>
+      </tr>
+      <tr>
+        <td><a href="./access.html" target="_blank">access</a></td>
+        <td>159</td>
+        <td>const char *filename int mode</td>
+      </tr>
+      <tr>
+        <td><a href="./geteuid.html" target="_blank">geteuid</a></td>
+        <td>156</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./getegid.html" target="_blank">getegid</a></td>
+        <td>155</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./getgid.html" target="_blank">getgid</a></td>
+        <td>153</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./stat.html" target="_blank">stat</a></td>
+        <td>97</td>
+        <td>const char *filename struct stat *statbuf</td>
+      </tr>
+      <tr>
+        <td><a href="./pread64.html" target="_blank">pread64</a></td>
+        <td>79</td>
+        <td>unsigned long fd char *buf size_t count loff_t pos</td>
+      </tr>
+      <tr>
+        <td><a href="./connect.html" target="_blank">connect</a></td>
+        <td>77</td>
+        <td>int fd struct sockaddr *uservaddr int addrlen</td>
+      </tr>
+      <tr>
+        <td><a href="./fcntl.html" target="_blank">fcntl</a></td>
+        <td>61</td>
+        <td>unsigned int fd unsigned int cmd unsigned long arg</td>
+      </tr>
+      <tr>
+        <td><a href="./getpid.html" target="_blank">getpid</a></td>
+        <td>48</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./getsockname.html" target="_blank">getsockname</a></td>
+        <td>46</td>
+        <td>int fd struct sockaddr *usockaddr int *usockaddr_len</td>
+      </tr>
+      <tr>
+        <td><a href="./clone.html" target="_blank">clone</a></td>
+        <td>40</td>
+        <td>
+          unsigned long clone_flags unsigned long newsp void *parent_tid void
+          *child_tid unsigned int tid
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./statfs.html" target="_blank">statfs</a></td>
+        <td>34</td>
+        <td>const char *pathname struct statfs *buf</td>
+      </tr>
+      <tr>
+        <td><a href="./unlink.html" target="_blank">unlink</a></td>
+        <td>33</td>
+        <td>const char *pathname</td>
+      </tr>
+      <tr>
+        <td><a href="./pipe.html" target="_blank">pipe</a></td>
+        <td>31</td>
+        <td>int *filedes</td>
+      </tr>
+      <tr>
+        <td><a href="./readv.html" target="_blank">readv</a></td>
+        <td>26</td>
+        <td>unsigned long fd const struct iovec *vec unsigned long vlen</td>
+      </tr>
+      <tr>
+        <td><a href="./getpeername.html" target="_blank">getpeername</a></td>
+        <td>25</td>
+        <td>int fd struct sockaddr *usockaddr int *usockaddr_len</td>
+      </tr>
+      <tr>
+        <td><a href="./dup2.html" target="_blank">dup2</a></td>
+        <td>23</td>
+        <td>unsigned int oldfd unsigned int newfd</td>
+      </tr>
+      <tr>
+        <td><a href="./getppid.html" target="_blank">getppid</a></td>
+        <td>21</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./kill.html" target="_blank">kill</a></td>
+        <td>20</td>
+        <td>pid_t pid int sig</td>
+      </tr>
+      <tr>
+        <td><a href="./getdents64.html" target="_blank">getdents64</a></td>
+        <td>20</td>
+        <td>
+          unsigned int fd struct linux_dirent64 *dirent unsigned int count
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./getpgrp.html" target="_blank">getpgrp</a></td>
+        <td>18</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./sysinfo.html" target="_blank">sysinfo</a></td>
+        <td>16</td>
+        <td>struct sysinfo *info</td>
+      </tr>
+      <tr>
+        <td><a href="./ftruncate.html" target="_blank">ftruncate</a></td>
+        <td>14</td>
+        <td>unsigned int fd unsigned long length</td>
+      </tr>
+      <tr>
+        <td><a href="./prlimit64.html" target="_blank">prlimit64</a></td>
+        <td>13</td>
+        <td>
+          pid_t pid unsigned int resource const struct rlimit64 *new_rlim struct
+          rlimit64 *old_rlim
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="./clock_gettime.html" target="_blank">clock_gettime</a>
+        </td>
+        <td>12</td>
+        <td>const clockid_t which_clock struct timespec *tp</td>
+      </tr>
+      <tr>
+        <td><a href="./readlink.html" target="_blank">readlink</a></td>
+        <td>11</td>
+        <td>const char *path char *buf int bufsiz</td>
+      </tr>
+      <tr>
+        <td><a href="./prctl.html" target="_blank">prctl</a></td>
+        <td>11</td>
+        <td>
+          int option unsigned long arg2 unsigned long arg3 unsigned long arg4
+          unsigned long arg5
+        </td>
+      </tr>
+      <tr>
+        <td><a href="./socketpair.html" target="_blank">socketpair</a></td>
+        <td>11</td>
+        <td>int family int type int protocol int *usockvec</td>
+      </tr>
+      <tr>
+        <td><a href="./fork.html" target="_blank">fork</a></td>
+        <td>11</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./setitimer.html" target="_blank">setitimer</a></td>
+        <td>10</td>
+        <td>int which struct itimerval *value struct itimerval *ovalue</td>
+      </tr>
+      <tr>
+        <td><a href="./utimensat.html" target="_blank">utimensat</a></td>
+        <td>9</td>
+        <td>int dfd const char *filename struct timespec *utimes int flags</td>
+      </tr>
+      <tr>
+        <td><a href="./listen.html" target="_blank">listen</a></td>
+        <td>4</td>
+        <td>int fd int backlog</td>
+      </tr>
+      <tr>
+        <td><a href="./sendfile.html" target="_blank">sendfile</a></td>
+        <td>3</td>
+        <td>int out_fd int in_fd off_t *offset size_t count</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="./sched_getaffinity.html" target="_blank"
+            >sched_getaffinity</a
+          >
+        </td>
+        <td>2</td>
+        <td>pid_t pid unsigned int len unsigned long *user_mask_ptr</td>
+      </tr>
+      <tr>
+        <td><a href="./chdir.html" target="_blank">chdir</a></td>
+        <td>2</td>
+        <td>const char *filename</td>
+      </tr>
+      <tr>
+        <td><a href="./gettid.html" target="_blank">gettid</a></td>
+        <td>2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="./chmod.html" target="_blank">chmod</a></td>
+        <td>2</td>
+        <td>const char *filename mode_t mode</td>
+      </tr>
+      <tr>
+        <td><a href="./getcwd.html" target="_blank">getcwd</a></td>
+        <td>1</td>
+        <td>char *buf unsigned long size</td>
+      </tr>
+      <tr>
+        <td><a href="./nanosleep.html" target="_blank">nanosleep</a></td>
+        <td>1</td>
+        <td>struct timespec *rqtp struct timespec *rmtp</td>
+      </tr>
+      <tr>
+        <td><a href="./mkdir.html" target="_blank">mkdir</a></td>
+        <td>1</td>
+        <td>const char *pathname int mode</td>
+      </tr>
+      <tr>
+        <td><a href="./rename.html" target="_blank">rename</a></td>
+        <td>1</td>
+        <td>const char *oldname const char *newname</td>
+      </tr>
+      <tr>
+        <td><a href="./rmdir.html" target="_blank">rmdir</a></td>
+        <td>1</td>
+        <td>const char *pathname</td>
+      </tr>
+      <tr>
+        <td><a href="./lstat.html" target="_blank">lstat</a></td>
+        <td>1</td>
+        <td>fconst char *filename struct stat *statbuf</td>
+      </tr>
+      <tr>
+        <td><a href="./accept.html" target="_blank">accept</a></td>
+        <td>1</td>
+        <td>int fd struct sockaddr *upeer_sockaddr int *upeer_addrlen</td>
+      </tr>
+      <tr>
+        <td><a href="./shutdown.html" target="_blank">shutdown</a></td>
+        <td>1</td>
+        <td>int fd int how</td>
+      </tr>
+    </table>
+  </body>
+</html>

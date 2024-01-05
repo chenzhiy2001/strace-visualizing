@@ -1,0 +1,17 @@
+{
+  "name": "strace-visualizing",
+  "version": "1.0.0",
+  "description": "static site generator for strace outputs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPLV3",
+  "dependencies": {
+    "html-creator": "^0.7.2",
+    "json-to-table": "^4.2.1"
+  }
+}

@@ -4,6 +4,12 @@
 
 安装`b3`:`sudo npm i -g b3-strace-parser`
 
+`npm run build`
+
+
+
+## trash
+
 `strace -f -o output.txt <your_script.sh>`
 
 `cat output.txt | b3 > output.json`
