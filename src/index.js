@@ -1,13 +1,13 @@
 const fs = require("fs");
 const config = require("./config");
 const htmlCreator = require("html-creator");
-
 const json2Table = require("json-to-table");
+const marked = require("marked");
+const path = require('path');
 
+//generate main page
 
 const all_count = JSON.parse( fs.readFileSync(config.dev.count_json_dir+"/output_1.json") );
-
-// { type: 'table', content: [{ type: 'td', content: 'I am in a table!' }] }
 
 const tableHead = {type:'tr',content:[{type:'th',content:'Syscall'},{type:'th',content:'Count'},{type:'th',content:'Args'}]};
 
@@ -58,6 +58,36 @@ fs.writeFile(
     console.log(`index.html was created successfully`);
   }
 );
+
+
+// generate per syscall details pages
+
+if (!fs.existsSync(`${config.dev.outdir}`))
+  fs.mkdirSync(`${config.dev.outdir}`);
+
+let syscall_details_md_list = fs.readdirSync(config.dev.per_syscall_details_dir);
+for(let i=0;i<syscall_details_md_list.length;i++){
+  let mdFileUint8array = fs.readFileSync(config.dev.per_syscall_details_dir+"/"+syscall_details_md_list[i]);
+  let mdFileString = new TextDecoder().decode(mdFileUint8array);
+
+  
+
+      fs.writeFile(
+        `${config.dev.outdir}/${path.parse(syscall_details_md_list[i]).name}.html`,
+        marked.parse(mdFileString),
+        e => {
+          if (e) throw e;
+          console.log(`${syscall_details_md_list[i]}.html was created successfully`);
+        }
+      );
+
+  
+
+
+
+
+}
+
 
 
 

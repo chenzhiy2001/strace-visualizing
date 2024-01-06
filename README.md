@@ -4,7 +4,7 @@
 
 安装`b3`:`sudo npm i -g b3-strace-parser`
 
-`npm run build`
+`npm install && npm run build`
 
 
 
