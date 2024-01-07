@@ -1,14 +1,49 @@
-<table>
-<thead>
-<tr>
-<th>系统调用名</th>
-<th>次数</th>
-<th>参数和含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>exit_group</td>
-<td>287</td>
-<td>int error_code</td>
-</tr>
-</tbody></table>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exit_group</title>
+  </head>
+  <h2>exit_group</h2>
+  <h3>Frequently Used Parameters</h3>
+  <body style="padding: 1rem">
+    <h3>Null Parameter Examples</h3>
+    <div></div>
+    <h3>Complete Man Page</h3>
+    <pre>
+EXIT_GROUP(2)                                                         Linux Programmer&#039;s Manual                                                         EXIT_GROUP(2)
+
+NAME
+       exit_group - exit all threads in a process
+
+SYNOPSIS
+       #include &lt;linux/unistd.h&gt;
+
+       void exit_group(int status);
+
+DESCRIPTION
+       This system call is equivalent to _exit(2) except that it terminates not only the calling thread, but all threads in the calling process&#039;s thread group.
+
+RETURN VALUE
+       This system call does not return.
+
+VERSIONS
+       This call is present since Linux 2.5.35.
+
+CONFORMING TO
+       This call is Linux-specific.
+
+NOTES
+       Since glibc 2.3, this is the system call invoked when the _exit(2) wrapper function is called.
+
+SEE ALSO
+       exit(2)
+
+COLOPHON
+       This  page  is part of release 5.10 of the Linux man-pages project.  A description of the project, information about reporting bugs, and the latest version of
+       this page, can be found at https://www.kernel.org/doc/man-pages/.
+
+Linux                                                                         2008-11-27                                                                EXIT_GROUP(2)
+</pre
+    >
+  </body>
+</html>
